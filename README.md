@@ -1,5 +1,4 @@
-# **Laporan Akhir Lengkap & Dokumentasi Sistem - Ujian Akhir Semester (UAS) Pemrograman Web 2**
-
+# **Laporan Modul Pratikum 1-15 Pemograman Web2
 ---
 
 ## 👤 Identitas Mahasiswa
