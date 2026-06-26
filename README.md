@@ -225,7 +225,7 @@ CREATE TABLE `artikel` (
 
 ```env
 database.default.hostname = localhost
-database.default.database = nama_database_anda
+database.default.database = lab_ci4
 database.default.username = root
 database.default.password = 
 database.default.DBDriver = MySQLi
