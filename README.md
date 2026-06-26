@@ -1,7 +1,7 @@
 # Laporan Modul Pratikum 1-14 Pemograman Web2
 ---
 
-## 👤 Identitas Mahasiswa
+## Identitas Mahasiswa
 * **Nama Lengkap:** Zaenal Maulana Rizki
 * **NIM:** 312410332
 * **Kelas:** I241D
@@ -10,13 +10,13 @@
 
 ---
 
-# 🚀 Portal Informasi & Manajemen Artikel Terintegrasi (Full-Stack Web Project)
+# Portal Informasi & Manajemen Artikel Terintegrasi (Full-Stack Web Project)
 
 Repositori ini berisi dokumentasi dan kode sumber lengkap untuk proyek pengembangan website Portal Informasi & Manajemen Artikel. Proyek ini dikembangkan secara bertahap mulai dari rancangan statis hingga bertransformasi menjadi **Aplikasi Satu Halaman (Single Page Application - SPA)** berbasis komponen yang dinamis dengan arsitektur pemisahan antara Frontend dan Backend secara modular.
 
 ---
 
-## 🛠️ Arsitektur Sistem & Stack Teknologi
+## Arsitektur Sistem & Stack Teknologi
 
 Aplikasi ini menggunakan pendekatan arsitektur modern dengan memisahkan tanggung jawab (Separation of Concerns) antara penyedia data (API) dan penyaji antarmuka (UI):
 
@@ -29,7 +29,7 @@ Aplikasi ini menggunakan pendekatan arsitektur modern dengan memisahkan tanggung
 
 ---
 
-## 📸 Antarmuka Aplikasi & Penjelasan Halaman
+## Antarmuka Aplikasi & Penjelasan Halaman
 
 ### 1. Halaman Depan / Beranda (Home)
 Halaman utama yang diakses oleh publik. Berfungsi untuk menyajikan ringkasan artikel terbaru secara dinamis. Tampilan layout menggunakan grid modern berukuran maksimal **1200px** untuk memastikan kenyamanan membaca. 
@@ -77,37 +77,46 @@ Halaman formulir interaktif yang digunakan oleh administrator untuk menambahkan 
 <img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/23f24fd9-ecf6-4e98-8c7c-84e9ba633112" />
 
 
-## 📸 Antarmuka Aplikasi lab8_vuejs & Penjelasan 4 Halaman Utama
+## Antarmuka Aplikasi lab8_vuejs & Penjelasan 4 Halaman Utama
 
-### 1. Beranda (Home)
-Halaman utama yang diakses oleh publik atau pengguna umum. Berfungsi untuk menyajikan ringkasan informasi dan daftar artikel terbaru secara dinamis dari server. Tampilan layout menggunakan standar grid modern berukuran maksimal **1200px** untuk memastikan kenyamanan membaca di berbagai resolusi layar.
-* **Fitur Utama & Alur Data:** Menyajikan banner utama, daftar ringkasan artikel terbaru dengan potongan teks pembuka, dan komponen sidebar widget (kategori, arsip, dan info penulis). Tautan baca selengkapnya telah terintegrasi untuk mengarahkan pembaca menuju ke detail isi artikel secara utuh.
+### 1. Beranda (Home) - lab8_vuejs
+Halaman beranda utama yang berfungsi sebagai gerbang penyambut (*landing page*) bagi administrator saat pertama kali membuka aplikasi Single Page Application (SPA). Halaman ini dirancang bersih dengan fokus pada navigasi yang efisien tanpa adanya beban pemuatan data katalog di awal.
 
-<img width="1909" height="988" alt="image" src="https://github.com/user-attachments/assets/75a6504e-0e6b-41ba-81fc-001b8ae11046" />
+* **Fitur Utama:** Menyajikan card penyambut statis bertuliskan **"Selamat Datang di Portal Admin Artikel"** serta instruksi penggunaan menu navigasi untuk mengelola data artikel secara *real-time*.
+* **Alur Kerja & Logika VueJS:** Halaman ini dimuat secara instan melalui sistem routing client-side Vue Router (`#/*`). Navigasi ke halaman ini tidak memicu reload browser sama sekali (*zero-reload*), karena VueJS hanya menukar komponen visual di dalam elemen jangkar `#app` secara dinamis.
 
----
-
-### 2. Kelola Artikel (Admin CRUD Panel)
-Halaman dasbor manajemen khusus administrator untuk memantau seluruh artikel yang tersimpan di dalam database, baik yang masih berstatus `Draft` maupun yang sudah siap tayang (`Publish`), secara real-time tanpa reload halaman global.
-* **Fitur Utama & Alur Data:** Menampilkan tabel responsif yang merangkum data ID artikel, judul utama, beserta status publikasinya. Pada baris tabel ini disediakan tombol aksi cepat untuk melakukan siapa saja manipulasi data, yaitu tombol **Edit** untuk memicu perubahan isi konten dan tombol **Hapus** untuk mengeksekusi penghapusan baris data permanen secara asinkronus ke server.
-
-<img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/ff2b5088-d1ee-4cdf-bd30-1864e80eca5f" />
+<img width="1192" height="449" alt="image" src="https://github.com/user-attachments/assets/cece1846-0961-4801-b320-c44b612882b3" />
 
 ---
 
-### 3. Tambah Data (Modal Form SPA)
-Halaman jendela dialog (Modal Form) interaktif yang menyembul ke layar secara instan ketika administrator menekan tombol "Tambah Data" pada panel kelola artikel. 
-* **Fitur Utama & Alur Data:** Menyediakan elemen masukan (*input control*) yang lengkap meliputi kolom input teks judul, area pengisian konten teks artikel utama (`textarea`) yang luas, serta pilihan menu dropdown kategori dinamis (`Edukasi`, `Teknologi`, `Hiburan`, `Kesehatan`, `Olahraga`). Saat tombol **Simpan** ditekan, seluruh inputan akan dikemas menjadi payload data berformat JSON lalu dikirimkan menggunakan library Axios menuju REST API backend lokal CodeIgniter 4 untuk disimpan langsung ke database MySQL.
+### 2. Kelola Artikel (Admin CRUD Panel) - lab8_vuejs
+Halaman manajemen data utama khusus untuk administrator guna memantau seluruh artikel yang tersimpan di dalam database MySQL secara terpusat dan asinkronus.
 
-<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/23f24fd9-ecf6-4e98-8c7c-84e9ba633112" />
+* **Fitur Utama:** Menampilkan tabel data responsif yang memuat kolom ID, Judul Artikel, Status Publikasi (`Draft` / `Publish`), serta kolom Aksi yang berisi tombol interaktif **Edit** dan **Hapus** untuk masing-masing baris data. Terdapat juga tombol utama **"Tambah Data"** di bagian atas tabel untuk memicu *pop-up modal* formulir baru.
+* **Alur Kerja & Logika VueJS:** Saat komponen ini dimuat, VueJS secara otomatis mengeksekusi fungsi `loadData()` di latar belakang menggunakan Axios (`axios.get(apiUrl + '/post')`). Data JSON yang diterima dari REST API CodeIgniter 4 langsung diikat ke dalam array reaktif `artikel: []`, sehingga baris tabel ter-render secara otomatis dan instan tanpa memicu penyegaran halaman web (*zero-reload*).
+
+<img width="1653" height="695" alt="image" src="https://github.com/user-attachments/assets/a48d9802-31a7-4d29-b0a9-d0f908ae67a7" />
 
 ---
 
-### 4. About Me
-Halaman statis yang memberikan informasi mendalam mengenai profil lengkap pengembang sistem, batasan fungsionalitas web, serta tujuan dari pembuatan proyek portal informasi ini.
-* **Fitur Utama & Alur Data:** Layout dirancang bersih, minimalis, dan berfokus pada tipografi yang nyaman dibaca untuk menyajikan teks naratif panjang. Halaman ini dipisahkan menjadi komponen modular di sisi frontend VueJS agar perpindahan navigasi menu terasa instan (*zero-reload*).
+### 3. Tambah Data (Modal Form SPA) - lab8_vuejs
+Halaman jendela dialog interaktif (*Modal Pop-up*) yang menyembul secara transparan di atas tabel kelola artikel ketika administrator menekan tombol **"Tambah Data"**.
 
-<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/ac68a375-57a3-4b74-8985-3812033eb964" />
+* **Fitur Utama:** Menyediakan formulir masukan (*input control*) bersih yang terdiri dari input teks untuk **Judul**, area kotak teks yang luas untuk **Isi Artikel**, serta pilihan menu dropdown untuk menentukan status publikasi (**Draft** / **Publish**). Dilengkapi tombol **Simpan** dan **Batal** di bagian bawah, serta tombol close (`×`) di sudut kanan atas untuk menutup modal.
+* **Alur Kerja & Logika VueJS:** Visibilitas modal ini dikendalikan secara reaktif menggunakan direktif `v-if="showForm"`. Saat tombol "Simpan" ditekan, fungsi `saveData()` akan mengemas seluruh inputan yang terikat via `v-model` ke dalam objek reaktif `formData` menjadi *payload* JSON. Prosedur ini kemudian mengeksekusi request `axios.post(apiUrl + '/post', payload)` ke backend CodeIgniter 4 secara asinkronus tanpa mereload halaman web.
+
+<img width="1607" height="741" alt="image" src="https://github.com/user-attachments/assets/980002cb-76cc-4197-955a-bb3872376006" />
+
+---
+
+### 4. About Me - lab8_vuejs
+Halaman statis yang menyajikan informasi profil data diri lengkap pengembang sistem, dirancang minimalis dan bersih dengan fokus pada keterbacaan data identitas mahasiswa secara terstruktur.
+
+* **Fitur Utama:** Menyajikan card informasi berwujud avatar lingkaran inisial huruf **"M"** besar berwarna biru, yang diikuti oleh tabel rincian data akademik reaktif berisi Nama Lengkap (**Zaenal Maulana Rizki**), Nomor Induk Mahasiswa (**312410332**), Kelas (**I241D**), beserta rincian Status Aplikasi (**Frontend SPA VueJS (Lab 12 Sukses)**).
+* **Alur Kerja & Logika VueJS:** Sama halnya dengan halaman lain, komponen profil ini dipisahkan menjadi objek modul internal frontend yang dikontrol perpindahannya secara dinamis menggunakan navigasi rute client-side Vue Router (`#/about`). Transisi pemuatan data profil ini berjalan secara instan (*zero-reload*) tanpa interupsi kedipan penyegaran browser global.
+
+<img width="1608" height="836" alt="image" src="https://github.com/user-attachments/assets/a57ef13c-80ab-4751-802b-2626e4c62624" />
+
 ---
 
 ## 📑 Rekam Jejak Perkembangan Modul (1 - 14)
