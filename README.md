@@ -76,6 +76,38 @@ Halaman formulir interaktif yang digunakan oleh administrator untuk menambahkan 
 
 <img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/23f24fd9-ecf6-4e98-8c7c-84e9ba633112" />
 
+
+## 📸 Antarmuka Aplikasi lab8_vuejs & Penjelasan 4 Halaman Utama
+
+### 1. Beranda (Home)
+Halaman utama yang diakses oleh publik atau pengguna umum. Berfungsi untuk menyajikan ringkasan informasi dan daftar artikel terbaru secara dinamis dari server. Tampilan layout menggunakan standar grid modern berukuran maksimal **1200px** untuk memastikan kenyamanan membaca di berbagai resolusi layar.
+* **Fitur Utama & Alur Data:** Menyajikan banner utama, daftar ringkasan artikel terbaru dengan potongan teks pembuka, dan komponen sidebar widget (kategori, arsip, dan info penulis). Tautan baca selengkapnya telah terintegrasi untuk mengarahkan pembaca menuju ke detail isi artikel secara utuh.
+
+<img width="1909" height="988" alt="image" src="https://github.com/user-attachments/assets/75a6504e-0e6b-41ba-81fc-001b8ae11046" />
+
+---
+
+### 2. Kelola Artikel (Admin CRUD Panel)
+Halaman dasbor manajemen khusus administrator untuk memantau seluruh artikel yang tersimpan di dalam database, baik yang masih berstatus `Draft` maupun yang sudah siap tayang (`Publish`), secara real-time tanpa reload halaman global.
+* **Fitur Utama & Alur Data:** Menampilkan tabel responsif yang merangkum data ID artikel, judul utama, beserta status publikasinya. Pada baris tabel ini disediakan tombol aksi cepat untuk melakukan siapa saja manipulasi data, yaitu tombol **Edit** untuk memicu perubahan isi konten dan tombol **Hapus** untuk mengeksekusi penghapusan baris data permanen secara asinkronus ke server.
+
+<img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/ff2b5088-d1ee-4cdf-bd30-1864e80eca5f" />
+
+---
+
+### 3. Tambah Data (Modal Form SPA)
+Halaman jendela dialog (Modal Form) interaktif yang menyembul ke layar secara instan ketika administrator menekan tombol "Tambah Data" pada panel kelola artikel. 
+* **Fitur Utama & Alur Data:** Menyediakan elemen masukan (*input control*) yang lengkap meliputi kolom input teks judul, area pengisian konten teks artikel utama (`textarea`) yang luas, serta pilihan menu dropdown kategori dinamis (`Edukasi`, `Teknologi`, `Hiburan`, `Kesehatan`, `Olahraga`). Saat tombol **Simpan** ditekan, seluruh inputan akan dikemas menjadi payload data berformat JSON lalu dikirimkan menggunakan library Axios menuju REST API backend lokal CodeIgniter 4 untuk disimpan langsung ke database MySQL.
+
+<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/23f24fd9-ecf6-4e98-8c7c-84e9ba633112" />
+
+---
+
+### 4. About Me
+Halaman statis yang memberikan informasi mendalam mengenai profil lengkap pengembang sistem, batasan fungsionalitas web, serta tujuan dari pembuatan proyek portal informasi ini.
+* **Fitur Utama & Alur Data:** Layout dirancang bersih, minimalis, dan berfokus pada tipografi yang nyaman dibaca untuk menyajikan teks naratif panjang. Halaman ini dipisahkan menjadi komponen modular di sisi frontend VueJS agar perpindahan navigasi menu terasa instan (*zero-reload*).
+
+<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/ac68a375-57a3-4b74-8985-3812033eb964" />
 ---
 
 ## 📑 Rekam Jejak Perkembangan Modul (1 - 14)
