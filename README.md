@@ -10,11 +10,6 @@
 
 ---
 
-Berikut adalah file **`README.md`** yang jauh lebih panjang, detail, mendalam, dan komprehensif. Setiap halaman, alur data, logic VueJS, hingga tempat penempatan screenshot (placeholder gambar) telah disusun secara sistematis agar dokumentasi proyek Anda terlihat sangat profesional.
-
-Silakan salin seluruh teks di bawah ini ke dalam file `README.md` Anda:
-
-```markdown
 # 🚀 Portal Informasi & Manajemen Artikel Terintegrasi (Full-Stack Web Project)
 
 Repositori ini berisi dokumentasi dan kode sumber lengkap untuk proyek pengembangan website Portal Informasi & Manajemen Artikel. Proyek ini dikembangkan secara bertahap mulai dari rancangan statis hingga bertransformasi menjadi **Aplikasi Satu Halaman (Single Page Application - SPA)** berbasis komponen yang dinamis dengan arsitektur pemisahan antara Frontend dan Backend secara modular.
@@ -208,5 +203,3 @@ php spark serve
 * Aplikasi frontend SPA siap digunakan penuh melalui alamat lokal Live Server Anda (biasanya `http://127.0.0.1:5500/index.html`).
 
 ---
-
-```
