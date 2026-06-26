@@ -58,11 +58,23 @@ Gerbang masuk otentikasi bagi administrator sistem. Meskipun pada tahap integras
 
 <img width="1187" height="508" alt="image" src="https://github.com/user-attachments/assets/3cb8c8ee-b335-4e10-8c9d-c48d130739b2" />
 
-### 6. Halaman Dasbor & Manajemen Admin (CRUD)
-Panel khusus administrator untuk melakukan pengelolaan data secara penuh (*Create, Read, Update, Delete*). Di sinilah komponen VueJS memainkan peran vital untuk manipulasi data secara *real-time*.
-* **Fitur Utama:** Tabel dinamis daftar seluruh artikel (ID, Judul, Status), tombol Aksi (Edit & Hapus), tombol Tambah Data yang memicu kemunculan jendela dialog interaktif (Modal Form) untuk pengisian judul, konten teks, pilihan kategori, serta status publikasi (`Draft` / `Publish`).
+### 6. Halaman Dashboard Admin
+Halaman panel kendali utama yang diakses pertama kali oleh administrator sistem. Halaman ini dirancang bersih menggunakan basis layout minimalis untuk memberikan ringkasan informasi performa web secara instan dan efisien sebelum admin mengelola data lebih lanjut.
+* **Fitur Utama & Alur Data:** Menyajikan banner selamat datang dinamis yang menarik menggunakan variabel judul (`$title`). Halaman ini terintegrasi langsung dengan database MySQL melalui model untuk menghitung seluruh total artikel yang telah tersimpan secara otomatis menggunakan fungsi hitung bawaan CodeIgniter 4 (`$model->countAllResults()`). Angka statistik tersebut ditampilkan langsung dalam bentuk widget kotak informasi, lengkap dengan link navigasi pintas yang rapi untuk menuju ke bagian pengelolaan data.
+
+<img width="1919" height="986" alt="image" src="https://github.com/user-attachments/assets/562d5a6d-929a-47f1-83b5-758a53926a02" />
+
+### 7. Halaman Katalog Artikel (Client-Side)
+Halaman utama yang digunakan untuk menampilkan seluruh daftar publikasi berita atau artikel kepada pengguna umum. Halaman ini dirancang luas dengan layout kontainer berukuran maksimal **1200px** agar teks artikel nyaman dibaca dan tidak merusak estetika visual.
+* **Fitur Utama & Alur Data:** Proses pemuatan data artikel pada halaman ini sepenuhnya menggunakan teknologi asinkronus (**Asynchronous JavaScript / AJAX jQuery**) yang menembak REST API backend tanpa memicu penyegaran halaman secara global (*zero-reload*). Setiap artikel di-render secara rapi dengan struktur dua kolom mini: gambar sampul berukuran presisi (`180px` x `120px`) di sisi kiri, bersandingan dengan metadata kategori berita, judul, serta potongan ringkasan isi teks artikel di sisi kanan. Halaman ini juga dilengkapi fitur **Pagination Dinamis** yang secara ketat membatasi pemuatan maksimal **4 artikel saja per halaman** dengan tombol navigasi angka kotak-kotak biru (1, 2, 3) di bagian bawah yang dibuat reaktif via script.
 
 <img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/ff2b5088-d1ee-4cdf-bd30-1864e80eca5f" />
+
+### 8. Halaman Tambah Artikel (CRUD Admin)
+Halaman formulir interaktif yang digunakan oleh administrator untuk menambahkan data publikasi berkas artikel baru ke dalam sistem portal informasi.
+* **Fitur Utama & Alur Data:** Formulir ini dirancang dengan elemen masukan (*input control*) yang lengkap, meliputi kolom ketikan judul artikel, area pengisian konten teks berita utama (`textarea`) yang luas, serta dropdown pilihan kategori dinamis (`Edukasi`, `Teknologi`, `Hiburan`, `Kesehatan`, `Olahraga`) yang datanya ditarik langsung dari tabel kategori. Form ini wajib menyertakan atribut pengaman berkas `enctype="multipart/form-data"` karena mendukung fitur unggah file gambar sampul. Di sisi backend Controller, proses penambahan data dikawal ketat oleh fungsi validasi (`$validation->run()`) dan pemeriksaan file (`isValid()`) untuk memastikan ukuran serta ekstensi berkas gambar aman sebelum dipindahkan secara otomatis ke dalam direktori fisik `public/gambar/` server, serta otomatis membuat string URL ramah mesin pencari (`slug`).
+
+<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/23f24fd9-ecf6-4e98-8c7c-84e9ba633112" />
 
 ---
 
