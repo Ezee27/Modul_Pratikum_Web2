@@ -62,8 +62,7 @@ Gerbang masuk otentikasi bagi administrator sistem. Meskipun pada tahap integras
 Panel khusus administrator untuk melakukan pengelolaan data secara penuh (*Create, Read, Update, Delete*). Di sinilah komponen VueJS memainkan peran vital untuk manipulasi data secara *real-time*.
 * **Fitur Utama:** Tabel dinamis daftar seluruh artikel (ID, Judul, Status), tombol Aksi (Edit & Hapus), tombol Tambah Data yang memicu kemunculan jendela dialog interaktif (Modal Form) untuk pengisian judul, konten teks, pilihan kategori, serta status publikasi (`Draft` / `Publish`).
 
-> ![Screenshot Panel Admin Artikel](public/assets/screenshots/admin_artikel.png)
-> *Tempatkan gambar tampilan manajemen data artikel admin di sini*
+<img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/ff2b5088-d1ee-4cdf-bd30-1864e80eca5f" />
 
 ---
 
