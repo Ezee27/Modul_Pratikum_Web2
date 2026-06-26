@@ -35,33 +35,28 @@ Aplikasi ini menggunakan pendekatan arsitektur modern dengan memisahkan tanggung
 Halaman utama yang diakses oleh publik. Berfungsi untuk menyajikan ringkasan artikel terbaru secara dinamis. Tampilan layout menggunakan grid modern berukuran maksimal **1200px** untuk memastikan kenyamanan membaca. 
 * **Fitur Utama:** Banner utama, daftar ringkasan artikel terbaru dengan potongan teks pembuka, sidebar widget (kategori, arsip, dan info penulis), serta tautan baca selengkapnya yang mengarah ke detail artikel.
 
-> ![Screenshot Halaman Home](public/assets/screenshots/home.png)
-> *Tempatkan gambar tampilan beranda utama di sini*
+<img width="1909" height="988" alt="image" src="https://github.com/user-attachments/assets/75a6504e-0e6b-41ba-81fc-001b8ae11046" />
 
 ### 2. Halaman Katalog Artikel (Client-Side)
 Halaman yang menampilkan seluruh daftar artikel yang telah diterbitkan (status: `Publish`). Halaman ini terintegrasi dengan fitur **Pagination Asinkronus**.
 * **Fitur Utama:** Data artikel dimuat di latar belakang menggunakan Axios tanpa memicu *reload* halaman global. Menampilkan maksimal **4 artikel per halaman**. Navigasi angka halaman (1, 2, 3) di-render secara dinamis berdasarkan total data dari database.
 
-> ![Screenshot Halaman Artikel](public/assets/screenshots/artikel.png)
-> *Tempatkan gambar tampilan katalog artikel di sini*
+<img width="1919" height="984" alt="image" src="https://github.com/user-attachments/assets/4ebc4113-4cf1-4c23-9bd4-b72ddd1bb3ba" />
 
 ### 3. Halaman Tentang Kami (About)
 Halaman statis yang memberikan informasi mendalam mengenai profil pembuat sistem, visi-misi portal, serta deskripsi fungsionalitas web. Layout dirancang bersih dengan tipografi yang dioptimalkan untuk membaca teks naratif yang panjang.
 
-> ![Screenshot Halaman About](public/assets/screenshots/about.png)
-> *Tempatkan gambar tampilan halaman about di sini*
+<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/ac68a375-57a3-4b74-8985-3812033eb964" />
 
 ### 4. Halaman Kontak (Contact)
 Menyediakan form interaktif bagi pengunjung untuk mengirimkan pesan atau masukan kepada pengelola website. Dilengkapi dengan peta lokasi interaktif atau elemen mockup informasi alamat, email, dan nomor telepon resmi.
 
-> ![Screenshot Halaman Kontak](public/assets/screenshots/contact.png)
-> *Tempatkan gambar tampilan halaman kontak di sini*
+<img width="1906" height="988" alt="image" src="https://github.com/user-attachments/assets/81a3eb45-0ea9-4083-9ff9-1422971e71ff" />
 
 ### 5. Halaman Login Admin
 Gerbang masuk otentikasi bagi administrator sistem. Meskipun pada tahap integrasi akhir SPA filter keamanan dilonggarkan untuk mempermudah pengujian REST API, form ini secara arsitektur dirancang untuk mengirimkan data kredensial (`username` & `password`) ke endpoint `/api/login`.
 
-> ![Screenshot Halaman Login Admin](public/assets/screenshots/login.png)
-> *Tempatkan gambar tampilan halaman login di sini*
+<img width="1187" height="508" alt="image" src="https://github.com/user-attachments/assets/3cb8c8ee-b335-4e10-8c9d-c48d130739b2" />
 
 ### 6. Halaman Dasbor & Manajemen Admin (CRUD)
 Panel khusus administrator untuk melakukan pengelolaan data secara penuh (*Create, Read, Update, Delete*). Di sinilah komponen VueJS memainkan peran vital untuk manipulasi data secara *real-time*.
